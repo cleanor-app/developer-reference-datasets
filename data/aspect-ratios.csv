@@ -1,0 +1,177 @@
+ratio,ratio_w,ratio_h,ratio_decimal,orientation,use_case,width_px,height_px
+1:1,1,1,1.0000,square,"Instagram post, avatars, app icons",320,320
+1:1,1,1,1.0000,square,"Instagram post, avatars, app icons",640,640
+1:1,1,1,1.0000,square,"Instagram post, avatars, app icons",720,720
+1:1,1,1,1.0000,square,"Instagram post, avatars, app icons",800,800
+1:1,1,1,1.0000,square,"Instagram post, avatars, app icons",1024,1024
+1:1,1,1,1.0000,square,"Instagram post, avatars, app icons",1080,1080
+1:1,1,1,1.0000,square,"Instagram post, avatars, app icons",1280,1280
+1:1,1,1,1.0000,square,"Instagram post, avatars, app icons",1440,1440
+1:1,1,1,1.0000,square,"Instagram post, avatars, app icons",1920,1920
+1:1,1,1,1.0000,square,"Instagram post, avatars, app icons",2560,2560
+1:1,1,1,1.0000,square,"Instagram post, avatars, app icons",3840,3840
+4:3,4,3,1.3333,landscape,"classic TV/monitor, iPad, most cameras",320,240
+4:3,4,3,1.3333,landscape,"classic TV/monitor, iPad, most cameras",640,480
+4:3,4,3,1.3333,landscape,"classic TV/monitor, iPad, most cameras",720,540
+4:3,4,3,1.3333,landscape,"classic TV/monitor, iPad, most cameras",800,600
+4:3,4,3,1.3333,landscape,"classic TV/monitor, iPad, most cameras",1024,768
+4:3,4,3,1.3333,landscape,"classic TV/monitor, iPad, most cameras",1080,810
+4:3,4,3,1.3333,landscape,"classic TV/monitor, iPad, most cameras",1280,960
+4:3,4,3,1.3333,landscape,"classic TV/monitor, iPad, most cameras",1440,1080
+4:3,4,3,1.3333,landscape,"classic TV/monitor, iPad, most cameras",1920,1440
+4:3,4,3,1.3333,landscape,"classic TV/monitor, iPad, most cameras",2560,1920
+4:3,4,3,1.3333,landscape,"classic TV/monitor, iPad, most cameras",3840,2880
+3:2,3,2,1.5000,landscape,"35mm photography, DSLR sensors",320,213
+3:2,3,2,1.5000,landscape,"35mm photography, DSLR sensors",640,427
+3:2,3,2,1.5000,landscape,"35mm photography, DSLR sensors",720,480
+3:2,3,2,1.5000,landscape,"35mm photography, DSLR sensors",800,533
+3:2,3,2,1.5000,landscape,"35mm photography, DSLR sensors",1024,683
+3:2,3,2,1.5000,landscape,"35mm photography, DSLR sensors",1080,720
+3:2,3,2,1.5000,landscape,"35mm photography, DSLR sensors",1280,853
+3:2,3,2,1.5000,landscape,"35mm photography, DSLR sensors",1440,960
+3:2,3,2,1.5000,landscape,"35mm photography, DSLR sensors",1920,1280
+3:2,3,2,1.5000,landscape,"35mm photography, DSLR sensors",2560,1707
+3:2,3,2,1.5000,landscape,"35mm photography, DSLR sensors",3840,2560
+16:9,16,9,1.7778,landscape,"HD/4K video, modern displays, YouTube",320,180
+16:9,16,9,1.7778,landscape,"HD/4K video, modern displays, YouTube",640,360
+16:9,16,9,1.7778,landscape,"HD/4K video, modern displays, YouTube",720,405
+16:9,16,9,1.7778,landscape,"HD/4K video, modern displays, YouTube",800,450
+16:9,16,9,1.7778,landscape,"HD/4K video, modern displays, YouTube",1024,576
+16:9,16,9,1.7778,landscape,"HD/4K video, modern displays, YouTube",1080,608
+16:9,16,9,1.7778,landscape,"HD/4K video, modern displays, YouTube",1280,720
+16:9,16,9,1.7778,landscape,"HD/4K video, modern displays, YouTube",1440,810
+16:9,16,9,1.7778,landscape,"HD/4K video, modern displays, YouTube",1920,1080
+16:9,16,9,1.7778,landscape,"HD/4K video, modern displays, YouTube",2560,1440
+16:9,16,9,1.7778,landscape,"HD/4K video, modern displays, YouTube",3840,2160
+16:10,16,10,1.6000,landscape,"laptop and monitor panels",320,200
+16:10,16,10,1.6000,landscape,"laptop and monitor panels",640,400
+16:10,16,10,1.6000,landscape,"laptop and monitor panels",720,450
+16:10,16,10,1.6000,landscape,"laptop and monitor panels",800,500
+16:10,16,10,1.6000,landscape,"laptop and monitor panels",1024,640
+16:10,16,10,1.6000,landscape,"laptop and monitor panels",1080,675
+16:10,16,10,1.6000,landscape,"laptop and monitor panels",1280,800
+16:10,16,10,1.6000,landscape,"laptop and monitor panels",1440,900
+16:10,16,10,1.6000,landscape,"laptop and monitor panels",1920,1200
+16:10,16,10,1.6000,landscape,"laptop and monitor panels",2560,1600
+16:10,16,10,1.6000,landscape,"laptop and monitor panels",3840,2400
+21:9,21,9,2.3333,landscape,"ultrawide monitor, cinematic 2.35:1 approx",320,137
+21:9,21,9,2.3333,landscape,"ultrawide monitor, cinematic 2.35:1 approx",640,274
+21:9,21,9,2.3333,landscape,"ultrawide monitor, cinematic 2.35:1 approx",720,309
+21:9,21,9,2.3333,landscape,"ultrawide monitor, cinematic 2.35:1 approx",800,343
+21:9,21,9,2.3333,landscape,"ultrawide monitor, cinematic 2.35:1 approx",1024,439
+21:9,21,9,2.3333,landscape,"ultrawide monitor, cinematic 2.35:1 approx",1080,463
+21:9,21,9,2.3333,landscape,"ultrawide monitor, cinematic 2.35:1 approx",1280,549
+21:9,21,9,2.3333,landscape,"ultrawide monitor, cinematic 2.35:1 approx",1440,617
+21:9,21,9,2.3333,landscape,"ultrawide monitor, cinematic 2.35:1 approx",1920,823
+21:9,21,9,2.3333,landscape,"ultrawide monitor, cinematic 2.35:1 approx",2560,1097
+21:9,21,9,2.3333,landscape,"ultrawide monitor, cinematic 2.35:1 approx",3840,1646
+5:4,5,4,1.2500,landscape,"large-format print, older monitors",320,256
+5:4,5,4,1.2500,landscape,"large-format print, older monitors",640,512
+5:4,5,4,1.2500,landscape,"large-format print, older monitors",720,576
+5:4,5,4,1.2500,landscape,"large-format print, older monitors",800,640
+5:4,5,4,1.2500,landscape,"large-format print, older monitors",1024,819
+5:4,5,4,1.2500,landscape,"large-format print, older monitors",1080,864
+5:4,5,4,1.2500,landscape,"large-format print, older monitors",1280,1024
+5:4,5,4,1.2500,landscape,"large-format print, older monitors",1440,1152
+5:4,5,4,1.2500,landscape,"large-format print, older monitors",1920,1536
+5:4,5,4,1.2500,landscape,"large-format print, older monitors",2560,2048
+5:4,5,4,1.2500,landscape,"large-format print, older monitors",3840,3072
+3:4,3,4,0.7500,portrait,"portrait photo, print",320,427
+3:4,3,4,0.7500,portrait,"portrait photo, print",640,853
+3:4,3,4,0.7500,portrait,"portrait photo, print",720,960
+3:4,3,4,0.7500,portrait,"portrait photo, print",800,1067
+3:4,3,4,0.7500,portrait,"portrait photo, print",1024,1365
+3:4,3,4,0.7500,portrait,"portrait photo, print",1080,1440
+3:4,3,4,0.7500,portrait,"portrait photo, print",1280,1707
+3:4,3,4,0.7500,portrait,"portrait photo, print",1440,1920
+3:4,3,4,0.7500,portrait,"portrait photo, print",1920,2560
+3:4,3,4,0.7500,portrait,"portrait photo, print",2560,3413
+3:4,3,4,0.7500,portrait,"portrait photo, print",3840,5120
+2:3,2,3,0.6667,portrait,"portrait 35mm, Pinterest",320,480
+2:3,2,3,0.6667,portrait,"portrait 35mm, Pinterest",640,960
+2:3,2,3,0.6667,portrait,"portrait 35mm, Pinterest",720,1080
+2:3,2,3,0.6667,portrait,"portrait 35mm, Pinterest",800,1200
+2:3,2,3,0.6667,portrait,"portrait 35mm, Pinterest",1024,1536
+2:3,2,3,0.6667,portrait,"portrait 35mm, Pinterest",1080,1620
+2:3,2,3,0.6667,portrait,"portrait 35mm, Pinterest",1280,1920
+2:3,2,3,0.6667,portrait,"portrait 35mm, Pinterest",1440,2160
+2:3,2,3,0.6667,portrait,"portrait 35mm, Pinterest",1920,2880
+2:3,2,3,0.6667,portrait,"portrait 35mm, Pinterest",2560,3840
+2:3,2,3,0.6667,portrait,"portrait 35mm, Pinterest",3840,5760
+9:16,9,16,0.5625,portrait,"Stories, Reels, TikTok, phone video",320,569
+9:16,9,16,0.5625,portrait,"Stories, Reels, TikTok, phone video",640,1138
+9:16,9,16,0.5625,portrait,"Stories, Reels, TikTok, phone video",720,1280
+9:16,9,16,0.5625,portrait,"Stories, Reels, TikTok, phone video",800,1422
+9:16,9,16,0.5625,portrait,"Stories, Reels, TikTok, phone video",1024,1820
+9:16,9,16,0.5625,portrait,"Stories, Reels, TikTok, phone video",1080,1920
+9:16,9,16,0.5625,portrait,"Stories, Reels, TikTok, phone video",1280,2276
+9:16,9,16,0.5625,portrait,"Stories, Reels, TikTok, phone video",1440,2560
+9:16,9,16,0.5625,portrait,"Stories, Reels, TikTok, phone video",1920,3413
+9:16,9,16,0.5625,portrait,"Stories, Reels, TikTok, phone video",2560,4551
+9:16,9,16,0.5625,portrait,"Stories, Reels, TikTok, phone video",3840,6827
+9:21,9,21,0.4286,portrait,"ultrawide portrait",320,747
+9:21,9,21,0.4286,portrait,"ultrawide portrait",640,1493
+9:21,9,21,0.4286,portrait,"ultrawide portrait",720,1680
+9:21,9,21,0.4286,portrait,"ultrawide portrait",800,1867
+9:21,9,21,0.4286,portrait,"ultrawide portrait",1024,2389
+9:21,9,21,0.4286,portrait,"ultrawide portrait",1080,2520
+9:21,9,21,0.4286,portrait,"ultrawide portrait",1280,2987
+9:21,9,21,0.4286,portrait,"ultrawide portrait",1440,3360
+9:21,9,21,0.4286,portrait,"ultrawide portrait",1920,4480
+9:21,9,21,0.4286,portrait,"ultrawide portrait",2560,5973
+9:21,9,21,0.4286,portrait,"ultrawide portrait",3840,8960
+4:5,4,5,0.8000,portrait,"Instagram portrait post",320,400
+4:5,4,5,0.8000,portrait,"Instagram portrait post",640,800
+4:5,4,5,0.8000,portrait,"Instagram portrait post",720,900
+4:5,4,5,0.8000,portrait,"Instagram portrait post",800,1000
+4:5,4,5,0.8000,portrait,"Instagram portrait post",1024,1280
+4:5,4,5,0.8000,portrait,"Instagram portrait post",1080,1350
+4:5,4,5,0.8000,portrait,"Instagram portrait post",1280,1600
+4:5,4,5,0.8000,portrait,"Instagram portrait post",1440,1800
+4:5,4,5,0.8000,portrait,"Instagram portrait post",1920,2400
+4:5,4,5,0.8000,portrait,"Instagram portrait post",2560,3200
+4:5,4,5,0.8000,portrait,"Instagram portrait post",3840,4800
+1:2,1,2,0.5000,portrait,"tall banners",320,640
+1:2,1,2,0.5000,portrait,"tall banners",640,1280
+1:2,1,2,0.5000,portrait,"tall banners",720,1440
+1:2,1,2,0.5000,portrait,"tall banners",800,1600
+1:2,1,2,0.5000,portrait,"tall banners",1024,2048
+1:2,1,2,0.5000,portrait,"tall banners",1080,2160
+1:2,1,2,0.5000,portrait,"tall banners",1280,2560
+1:2,1,2,0.5000,portrait,"tall banners",1440,2880
+1:2,1,2,0.5000,portrait,"tall banners",1920,3840
+1:2,1,2,0.5000,portrait,"tall banners",2560,5120
+1:2,1,2,0.5000,portrait,"tall banners",3840,7680
+2:1,2,1,2.0000,landscape,"wide banners, panoramas",320,160
+2:1,2,1,2.0000,landscape,"wide banners, panoramas",640,320
+2:1,2,1,2.0000,landscape,"wide banners, panoramas",720,360
+2:1,2,1,2.0000,landscape,"wide banners, panoramas",800,400
+2:1,2,1,2.0000,landscape,"wide banners, panoramas",1024,512
+2:1,2,1,2.0000,landscape,"wide banners, panoramas",1080,540
+2:1,2,1,2.0000,landscape,"wide banners, panoramas",1280,640
+2:1,2,1,2.0000,landscape,"wide banners, panoramas",1440,720
+2:1,2,1,2.0000,landscape,"wide banners, panoramas",1920,960
+2:1,2,1,2.0000,landscape,"wide banners, panoramas",2560,1280
+2:1,2,1,2.0000,landscape,"wide banners, panoramas",3840,1920
+1.85:1,1.85,1,1.8500,landscape,"cinema flat (DCI 1.85:1)",320,173
+1.85:1,1.85,1,1.8500,landscape,"cinema flat (DCI 1.85:1)",640,346
+1.85:1,1.85,1,1.8500,landscape,"cinema flat (DCI 1.85:1)",720,389
+1.85:1,1.85,1,1.8500,landscape,"cinema flat (DCI 1.85:1)",800,432
+1.85:1,1.85,1,1.8500,landscape,"cinema flat (DCI 1.85:1)",1024,554
+1.85:1,1.85,1,1.8500,landscape,"cinema flat (DCI 1.85:1)",1080,584
+1.85:1,1.85,1,1.8500,landscape,"cinema flat (DCI 1.85:1)",1280,692
+1.85:1,1.85,1,1.8500,landscape,"cinema flat (DCI 1.85:1)",1440,778
+1.85:1,1.85,1,1.8500,landscape,"cinema flat (DCI 1.85:1)",1920,1038
+1.85:1,1.85,1,1.8500,landscape,"cinema flat (DCI 1.85:1)",2560,1384
+1.85:1,1.85,1,1.8500,landscape,"cinema flat (DCI 1.85:1)",3840,2076
+2.39:1,2.39,1,2.3900,landscape,"cinema scope (anamorphic 2.39:1)",320,134
+2.39:1,2.39,1,2.3900,landscape,"cinema scope (anamorphic 2.39:1)",640,268
+2.39:1,2.39,1,2.3900,landscape,"cinema scope (anamorphic 2.39:1)",720,301
+2.39:1,2.39,1,2.3900,landscape,"cinema scope (anamorphic 2.39:1)",800,335
+2.39:1,2.39,1,2.3900,landscape,"cinema scope (anamorphic 2.39:1)",1024,428
+2.39:1,2.39,1,2.3900,landscape,"cinema scope (anamorphic 2.39:1)",1080,452
+2.39:1,2.39,1,2.3900,landscape,"cinema scope (anamorphic 2.39:1)",1280,536
+2.39:1,2.39,1,2.3900,landscape,"cinema scope (anamorphic 2.39:1)",1440,603
+2.39:1,2.39,1,2.3900,landscape,"cinema scope (anamorphic 2.39:1)",1920,803
+2.39:1,2.39,1,2.3900,landscape,"cinema scope (anamorphic 2.39:1)",2560,1071
+2.39:1,2.39,1,2.3900,landscape,"cinema scope (anamorphic 2.39:1)",3840,1607

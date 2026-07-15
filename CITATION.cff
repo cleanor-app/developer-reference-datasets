@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use these datasets, please cite them as below."
+title: "Developer Reference Datasets: Aspect Ratios, WCAG Contrast, Encoding Sizes"
+authors:
+  - name: "Cleanor Labs"
+    orcid: "https://orcid.org/0009-0005-4623-961X"
+url: "https://cleanor.app/reference"
+repository-code: "https://github.com/cleanor-app/developer-reference-datasets"
+license: CC-BY-4.0
+version: "1.0.0"
+keywords:
+  - aspect ratio
+  - screen resolution
+  - WCAG
+  - color contrast
+  - accessibility
+  - character encoding
+  - UTF-8
+  - reference data
+  - open data

@@ -1,0 +1,80 @@
+{
+  "id": "cleanorlabs/developer-reference-datasets",
+  "title": "Developer Reference: Aspect Ratios, WCAG Contrast, Encoding",
+  "subtitle": "Computed lookup tables: aspect-ratio pixels, WCAG 2.1 contrast, UTF-8/16/32 byte sizes",
+  "description": "Open, reproducible reference data for web and app developers — computed from first principles, not scraped, so every value is exact and re-runnable.\n\n**What's inside**\n- **aspect-ratios.csv / resolutions.csv**: 16 named aspect ratios across 11 widths (16:9 at 1920 = 1080), and 29 named resolutions (720p to 8K, phones, social) with megapixels and reduced ratio.\n- **wcag-contrast-pairs.csv / wcag-on-white-black.csv**: WCAG 2.1 contrast ratio and AA/AAA pass-fail for every pair of a 25-colour UI palette, and each colour vs white and black.\n- **encoding-sizes.csv**: code points and UTF-8 / UTF-16 / UTF-32 byte sizes for 16 text samples across scripts (Latin 1 byte, CJK 3, emoji 4).\n\n**License:** CC BY 4.0 (attribution to Cleanor Labs).\n**Code & methodology:** https://github.com/cleanor-app/developer-reference-datasets\n**Write-ups:** https://cleanor.app/reference",
+  "licenses": [{ "name": "CC BY 4.0" }],
+  "keywords": ["computer science", "data analytics", "beginner", "tabular", "internet"],
+  "resources": [
+    {
+      "path": "aspect-ratios.csv",
+      "description": "Named aspect ratios × common widths → exact height.",
+      "schema": { "fields": [
+        { "name": "ratio", "description": "Aspect ratio label (e.g. 16:9)", "type": "string" },
+        { "name": "ratio_w", "description": "Ratio width term", "type": "number" },
+        { "name": "ratio_h", "description": "Ratio height term", "type": "number" },
+        { "name": "ratio_decimal", "description": "Width/height as a decimal", "type": "number" },
+        { "name": "orientation", "description": "landscape, portrait, or square", "type": "string" },
+        { "name": "use_case", "description": "Where the ratio is commonly used", "type": "string" },
+        { "name": "width_px", "description": "Width in pixels", "type": "number" },
+        { "name": "height_px", "description": "Computed height in pixels", "type": "number" }
+      ] }
+    },
+    {
+      "path": "resolutions.csv",
+      "description": "Named resolutions → pixel size, megapixels, reduced aspect ratio.",
+      "schema": { "fields": [
+        { "name": "name", "description": "Resolution name", "type": "string" },
+        { "name": "width_px", "description": "Width in pixels", "type": "number" },
+        { "name": "height_px", "description": "Height in pixels", "type": "number" },
+        { "name": "megapixels", "description": "Total megapixels", "type": "number" },
+        { "name": "aspect_ratio", "description": "Reduced aspect ratio", "type": "string" },
+        { "name": "aspect_decimal", "description": "Aspect ratio as a decimal", "type": "number" },
+        { "name": "orientation", "description": "landscape, portrait, or square", "type": "string" }
+      ] }
+    },
+    {
+      "path": "wcag-contrast-pairs.csv",
+      "description": "WCAG 2.1 contrast ratio and AA/AAA pass-fail for every fg×bg colour pair.",
+      "schema": { "fields": [
+        { "name": "fg_name", "description": "Foreground colour name", "type": "string" },
+        { "name": "fg_hex", "description": "Foreground hex", "type": "string" },
+        { "name": "bg_name", "description": "Background colour name", "type": "string" },
+        { "name": "bg_hex", "description": "Background hex", "type": "string" },
+        { "name": "contrast_ratio", "description": "WCAG 2.1 contrast ratio", "type": "number" },
+        { "name": "aa_normal", "description": "Pass/fail AA normal text (>=4.5)", "type": "string" },
+        { "name": "aa_large", "description": "Pass/fail AA large text (>=3.0)", "type": "string" },
+        { "name": "aaa_normal", "description": "Pass/fail AAA normal text (>=7.0)", "type": "string" },
+        { "name": "aaa_large", "description": "Pass/fail AAA large text (>=4.5)", "type": "string" }
+      ] }
+    },
+    {
+      "path": "wcag-on-white-black.csv",
+      "description": "Each colour's contrast vs white and vs black with AA/AAA pass-fail.",
+      "schema": { "fields": [
+        { "name": "color_name", "description": "Colour name", "type": "string" },
+        { "name": "hex", "description": "Colour hex", "type": "string" },
+        { "name": "vs", "description": "Background compared against (white/black)", "type": "string" },
+        { "name": "contrast_ratio", "description": "WCAG 2.1 contrast ratio", "type": "number" },
+        { "name": "aa_normal", "description": "Pass/fail AA normal text", "type": "string" },
+        { "name": "aa_large", "description": "Pass/fail AA large text", "type": "string" },
+        { "name": "aaa_normal", "description": "Pass/fail AAA normal text", "type": "string" },
+        { "name": "aaa_large", "description": "Pass/fail AAA large text", "type": "string" }
+      ] }
+    },
+    {
+      "path": "encoding-sizes.csv",
+      "description": "Code points and UTF-8/16/32 byte sizes per text sample by script.",
+      "schema": { "fields": [
+        { "name": "sample_id", "description": "Sample identifier", "type": "string" },
+        { "name": "script", "description": "Writing system", "type": "string" },
+        { "name": "code_points", "description": "Number of Unicode code points", "type": "number" },
+        { "name": "utf16_code_units", "description": "Number of UTF-16 code units", "type": "number" },
+        { "name": "utf8_bytes", "description": "Size in UTF-8 bytes", "type": "number" },
+        { "name": "utf16_bytes", "description": "Size in UTF-16 bytes", "type": "number" },
+        { "name": "utf32_bytes", "description": "Size in UTF-32 bytes", "type": "number" },
+        { "name": "utf8_bytes_per_code_point", "description": "UTF-8 bytes per code point", "type": "number" }
+      ] }
+    }
+  ]
+}

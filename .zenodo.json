@@ -1,0 +1,38 @@
+{
+  "title": "Developer Reference Datasets: Aspect Ratios, WCAG Contrast, Encoding Sizes",
+  "description": "<p>Open, reproducible reference datasets for web and app developers: aspect-ratio pixel tables and common resolutions, WCAG 2.1 contrast ratios for a UI colour palette (with AA/AAA pass-fail), and character-encoding byte sizes (UTF-8 / UTF-16 / UTF-32) by script. Every value is produced by a small script in the repository, from first principles, so it can be verified or re-run.</p><p>Human-readable write-ups: https://cleanor.app/reference</p>",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "creators": [
+    {
+      "name": "Cleanor Labs",
+      "affiliation": "Cleanor Research Labs",
+      "orcid": "0009-0005-4623-961X"
+    }
+  ],
+  "keywords": [
+    "aspect ratio",
+    "screen resolution",
+    "WCAG",
+    "color contrast",
+    "accessibility",
+    "character encoding",
+    "UTF-8",
+    "reference data",
+    "open data",
+    "reproducible research"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/cleanor-app/developer-reference-datasets",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://cleanor.app/reference",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    }
+  ]
+}
