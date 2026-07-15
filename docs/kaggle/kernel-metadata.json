@@ -1,5 +1,5 @@
 {
-  "id": "cleanorlabs/developer-reference-eda",
+  "id": "cleanorlabs/developer-reference-datasets-a-quick-tour",
   "title": "Developer Reference Datasets: a quick tour",
   "code_file": "developer-reference-eda.ipynb",
   "language": "python",
@@ -8,7 +8,9 @@
   "enable_gpu": false,
   "enable_tpu": false,
   "enable_internet": false,
-  "dataset_sources": ["cleanorlabs/developer-reference-datasets"],
+  "dataset_sources": [
+    "cleanorlabs/developer-reference-datasets"
+  ],
   "keywords": [],
   "kernel_sources": [],
   "competition_sources": [],
