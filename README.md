@@ -22,6 +22,8 @@
 | [`data/file-types.csv`](data/file-types.csv) | 66 file types → MIME type + magic-number signature (with offset) + category | 66 |
 | [`data/favicon-icon-sizes.csv`](data/favicon-icon-sizes.csv) | favicon / app-icon size requirements across Web, Apple, PWA, Android, iOS, Windows, stores | 32 |
 | [`data/social-media-image-sizes.csv`](data/social-media-image-sizes.csv) | recommended image sizes for 7 platforms + Open Graph, each date-stamped (they change) | 26 |
+| [`data/qr-code-capacity.csv`](data/qr-code-capacity.csv) | max characters per QR version (1–40) × ECC level (L/M/Q/H) × mode (numeric/alphanumeric/byte/kanji) | 160 |
+| [`data/image-format-support.csv`](data/image-format-support.csv) | AVIF/WebP/JPEG XL/HEIC/AV1/HEVC support across 8 browsers → first full version + current status | 48 |
 
 ## A few answers straight from the data
 
@@ -40,6 +42,8 @@
 | [`docs/file-signatures-magic-numbers.md`](docs/file-signatures-magic-numbers.md) | Identify a file by its bytes — signatures with the offset that most lists get wrong |
 | [`docs/favicon-and-app-icon-sizes.md`](docs/favicon-and-app-icon-sizes.md) | Every favicon and app-icon size, per platform |
 | [`docs/social-media-image-sizes.md`](docs/social-media-image-sizes.md) | Current social image sizes, date-stamped |
+| [`docs/qr-code-capacity.md`](docs/qr-code-capacity.md) | How many characters fit in a QR code, by version, ECC level and mode |
+| [`docs/image-format-support.md`](docs/image-format-support.md) | Which browsers support AVIF, WebP, JPEG XL, HEIC, AV1, HEVC — and since when |
 
 ## Reproduce
 

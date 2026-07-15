@@ -112,6 +112,34 @@
         { "name": "measured_date", "description": "Month the value was verified", "type": "string" },
         { "name": "notes", "description": "Safe-area and other notes", "type": "string" }
       ] }
+    },
+    {
+      "path": "qr-code-capacity.csv",
+      "description": "Max characters per QR version × ECC level × mode (computed from ISO/IEC 18004).",
+      "schema": { "fields": [
+        { "name": "version", "description": "QR version 1-40", "type": "number" },
+        { "name": "modules", "description": "Side length in modules", "type": "number" },
+        { "name": "ecc_level", "description": "Error-correction level L/M/Q/H", "type": "string" },
+        { "name": "ecc_recovery_pct", "description": "Percent of codewords recoverable", "type": "number" },
+        { "name": "numeric", "description": "Max digits in numeric mode", "type": "number" },
+        { "name": "alphanumeric", "description": "Max chars in alphanumeric mode", "type": "number" },
+        { "name": "byte", "description": "Max bytes in byte (UTF-8) mode", "type": "number" },
+        { "name": "kanji", "description": "Max characters in kanji mode", "type": "number" },
+        { "name": "data_codewords", "description": "Data codewords available", "type": "number" }
+      ] }
+    },
+    {
+      "path": "image-format-support.csv",
+      "description": "AVIF/WebP/JPEG XL/HEIC/AV1/HEVC support per browser (first full version + current).",
+      "schema": { "fields": [
+        { "name": "format", "description": "Format key", "type": "string" },
+        { "name": "format_title", "description": "Format title", "type": "string" },
+        { "name": "browser", "description": "Browser key", "type": "string" },
+        { "name": "browser_name", "description": "Browser name", "type": "string" },
+        { "name": "first_full_support_version", "description": "First version with full support ('never' if none)", "type": "string" },
+        { "name": "current_support", "description": "full / partial / no / unknown", "type": "string" },
+        { "name": "caniuse_version", "description": "caniuse-lite data vintage", "type": "string" }
+      ] }
     }
   ]
 }

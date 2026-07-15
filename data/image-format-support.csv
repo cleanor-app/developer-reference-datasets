@@ -1,0 +1,49 @@
+format,format_title,browser,browser_name,first_full_support_version,current_support,caniuse_version
+avif,AVIF image format,chrome,Chrome,85,full,1.0.30001787
+avif,AVIF image format,edge,Edge,121,full,1.0.30001787
+avif,AVIF image format,firefox,Firefox,93,full,1.0.30001787
+avif,AVIF image format,safari,Safari,16.4,full,1.0.30001787
+avif,AVIF image format,ios_saf,iOS Safari,16.0,full,1.0.30001787
+avif,AVIF image format,and_chr,Chrome Android,147,full,1.0.30001787
+avif,AVIF image format,samsung,Samsung Internet,14.0,full,1.0.30001787
+avif,AVIF image format,opera,Opera,71,full,1.0.30001787
+webp,WebP image format,chrome,Chrome,32,full,1.0.30001787
+webp,WebP image format,edge,Edge,18,full,1.0.30001787
+webp,WebP image format,firefox,Firefox,65,full,1.0.30001787
+webp,WebP image format,safari,Safari,16.0,full,1.0.30001787
+webp,WebP image format,ios_saf,iOS Safari,14.0-14.4,full,1.0.30001787
+webp,WebP image format,and_chr,Chrome Android,147,full,1.0.30001787
+webp,WebP image format,samsung,Samsung Internet,4,full,1.0.30001787
+webp,WebP image format,opera,Opera,19,full,1.0.30001787
+jpegxl,JPEG XL image format,chrome,Chrome,never,no,1.0.30001787
+jpegxl,JPEG XL image format,edge,Edge,never,no,1.0.30001787
+jpegxl,JPEG XL image format,firefox,Firefox,never,no,1.0.30001787
+jpegxl,JPEG XL image format,safari,Safari,never,partial,1.0.30001787
+jpegxl,JPEG XL image format,ios_saf,iOS Safari,never,partial,1.0.30001787
+jpegxl,JPEG XL image format,and_chr,Chrome Android,never,no,1.0.30001787
+jpegxl,JPEG XL image format,samsung,Samsung Internet,never,no,1.0.30001787
+jpegxl,JPEG XL image format,opera,Opera,never,no,1.0.30001787
+heif,HEIF/HEIC image format,chrome,Chrome,never,no,1.0.30001787
+heif,HEIF/HEIC image format,edge,Edge,never,no,1.0.30001787
+heif,HEIF/HEIC image format,firefox,Firefox,never,no,1.0.30001787
+heif,HEIF/HEIC image format,safari,Safari,17.0,full,1.0.30001787
+heif,HEIF/HEIC image format,ios_saf,iOS Safari,17.0,full,1.0.30001787
+heif,HEIF/HEIC image format,and_chr,Chrome Android,never,no,1.0.30001787
+heif,HEIF/HEIC image format,samsung,Samsung Internet,never,no,1.0.30001787
+heif,HEIF/HEIC image format,opera,Opera,never,no,1.0.30001787
+av1,AV1 video format,chrome,Chrome,70,full,1.0.30001787
+av1,AV1 video format,edge,Edge,121,full,1.0.30001787
+av1,AV1 video format,firefox,Firefox,67,full,1.0.30001787
+av1,AV1 video format,safari,Safari,never,partial,1.0.30001787
+av1,AV1 video format,ios_saf,iOS Safari,never,partial,1.0.30001787
+av1,AV1 video format,and_chr,Chrome Android,147,full,1.0.30001787
+av1,AV1 video format,samsung,Samsung Internet,12.0,full,1.0.30001787
+av1,AV1 video format,opera,Opera,57,full,1.0.30001787
+hevc,HEVC/H.265 video format,chrome,Chrome,never,partial,1.0.30001787
+hevc,HEVC/H.265 video format,edge,Edge,never,partial,1.0.30001787
+hevc,HEVC/H.265 video format,firefox,Firefox,never,partial,1.0.30001787
+hevc,HEVC/H.265 video format,safari,Safari,13,full,1.0.30001787
+hevc,HEVC/H.265 video format,ios_saf,iOS Safari,11.0-11.2,full,1.0.30001787
+hevc,HEVC/H.265 video format,and_chr,Chrome Android,never,partial,1.0.30001787
+hevc,HEVC/H.265 video format,samsung,Samsung Internet,21,full,1.0.30001787
+hevc,HEVC/H.265 video format,opera,Opera,never,partial,1.0.30001787

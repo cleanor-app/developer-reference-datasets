@@ -1,0 +1,275 @@
+{
+  "caniuse_version": "1.0.30001787",
+  "formats": {
+    "avif": {
+      "title": "AVIF image format",
+      "browsers": {
+        "chrome": {
+          "name": "Chrome",
+          "first_full_version": "85",
+          "current": "full"
+        },
+        "edge": {
+          "name": "Edge",
+          "first_full_version": "121",
+          "current": "full"
+        },
+        "firefox": {
+          "name": "Firefox",
+          "first_full_version": "93",
+          "current": "full"
+        },
+        "safari": {
+          "name": "Safari",
+          "first_full_version": "16.4",
+          "current": "full"
+        },
+        "ios_saf": {
+          "name": "iOS Safari",
+          "first_full_version": "16.0",
+          "current": "full"
+        },
+        "and_chr": {
+          "name": "Chrome Android",
+          "first_full_version": "147",
+          "current": "full"
+        },
+        "samsung": {
+          "name": "Samsung Internet",
+          "first_full_version": "14.0",
+          "current": "full"
+        },
+        "opera": {
+          "name": "Opera",
+          "first_full_version": "71",
+          "current": "full"
+        }
+      }
+    },
+    "webp": {
+      "title": "WebP image format",
+      "browsers": {
+        "chrome": {
+          "name": "Chrome",
+          "first_full_version": "32",
+          "current": "full"
+        },
+        "edge": {
+          "name": "Edge",
+          "first_full_version": "18",
+          "current": "full"
+        },
+        "firefox": {
+          "name": "Firefox",
+          "first_full_version": "65",
+          "current": "full"
+        },
+        "safari": {
+          "name": "Safari",
+          "first_full_version": "16.0",
+          "current": "full"
+        },
+        "ios_saf": {
+          "name": "iOS Safari",
+          "first_full_version": "14.0-14.4",
+          "current": "full"
+        },
+        "and_chr": {
+          "name": "Chrome Android",
+          "first_full_version": "147",
+          "current": "full"
+        },
+        "samsung": {
+          "name": "Samsung Internet",
+          "first_full_version": "4",
+          "current": "full"
+        },
+        "opera": {
+          "name": "Opera",
+          "first_full_version": "19",
+          "current": "full"
+        }
+      }
+    },
+    "jpegxl": {
+      "title": "JPEG XL image format",
+      "browsers": {
+        "chrome": {
+          "name": "Chrome",
+          "first_full_version": null,
+          "current": "no"
+        },
+        "edge": {
+          "name": "Edge",
+          "first_full_version": null,
+          "current": "no"
+        },
+        "firefox": {
+          "name": "Firefox",
+          "first_full_version": null,
+          "current": "no"
+        },
+        "safari": {
+          "name": "Safari",
+          "first_full_version": null,
+          "current": "partial"
+        },
+        "ios_saf": {
+          "name": "iOS Safari",
+          "first_full_version": null,
+          "current": "partial"
+        },
+        "and_chr": {
+          "name": "Chrome Android",
+          "first_full_version": null,
+          "current": "no"
+        },
+        "samsung": {
+          "name": "Samsung Internet",
+          "first_full_version": null,
+          "current": "no"
+        },
+        "opera": {
+          "name": "Opera",
+          "first_full_version": null,
+          "current": "no"
+        }
+      }
+    },
+    "heif": {
+      "title": "HEIF/HEIC image format",
+      "browsers": {
+        "chrome": {
+          "name": "Chrome",
+          "first_full_version": null,
+          "current": "no"
+        },
+        "edge": {
+          "name": "Edge",
+          "first_full_version": null,
+          "current": "no"
+        },
+        "firefox": {
+          "name": "Firefox",
+          "first_full_version": null,
+          "current": "no"
+        },
+        "safari": {
+          "name": "Safari",
+          "first_full_version": "17.0",
+          "current": "full"
+        },
+        "ios_saf": {
+          "name": "iOS Safari",
+          "first_full_version": "17.0",
+          "current": "full"
+        },
+        "and_chr": {
+          "name": "Chrome Android",
+          "first_full_version": null,
+          "current": "no"
+        },
+        "samsung": {
+          "name": "Samsung Internet",
+          "first_full_version": null,
+          "current": "no"
+        },
+        "opera": {
+          "name": "Opera",
+          "first_full_version": null,
+          "current": "no"
+        }
+      }
+    },
+    "av1": {
+      "title": "AV1 video format",
+      "browsers": {
+        "chrome": {
+          "name": "Chrome",
+          "first_full_version": "70",
+          "current": "full"
+        },
+        "edge": {
+          "name": "Edge",
+          "first_full_version": "121",
+          "current": "full"
+        },
+        "firefox": {
+          "name": "Firefox",
+          "first_full_version": "67",
+          "current": "full"
+        },
+        "safari": {
+          "name": "Safari",
+          "first_full_version": null,
+          "current": "partial"
+        },
+        "ios_saf": {
+          "name": "iOS Safari",
+          "first_full_version": null,
+          "current": "partial"
+        },
+        "and_chr": {
+          "name": "Chrome Android",
+          "first_full_version": "147",
+          "current": "full"
+        },
+        "samsung": {
+          "name": "Samsung Internet",
+          "first_full_version": "12.0",
+          "current": "full"
+        },
+        "opera": {
+          "name": "Opera",
+          "first_full_version": "57",
+          "current": "full"
+        }
+      }
+    },
+    "hevc": {
+      "title": "HEVC/H.265 video format",
+      "browsers": {
+        "chrome": {
+          "name": "Chrome",
+          "first_full_version": null,
+          "current": "partial"
+        },
+        "edge": {
+          "name": "Edge",
+          "first_full_version": null,
+          "current": "partial"
+        },
+        "firefox": {
+          "name": "Firefox",
+          "first_full_version": null,
+          "current": "partial"
+        },
+        "safari": {
+          "name": "Safari",
+          "first_full_version": "13",
+          "current": "full"
+        },
+        "ios_saf": {
+          "name": "iOS Safari",
+          "first_full_version": "11.0-11.2",
+          "current": "full"
+        },
+        "and_chr": {
+          "name": "Chrome Android",
+          "first_full_version": null,
+          "current": "partial"
+        },
+        "samsung": {
+          "name": "Samsung Internet",
+          "first_full_version": "21",
+          "current": "full"
+        },
+        "opera": {
+          "name": "Opera",
+          "first_full_version": null,
+          "current": "partial"
+        }
+      }
+    }
+  }
+}

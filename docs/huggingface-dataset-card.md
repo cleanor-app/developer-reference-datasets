@@ -30,6 +30,10 @@ configs:
     data_files: favicon-icon-sizes.csv
   - config_name: social-media-image-sizes
     data_files: social-media-image-sizes.csv
+  - config_name: qr-code-capacity
+    data_files: qr-code-capacity.csv
+  - config_name: image-format-support
+    data_files: image-format-support.csv
 ---
 
 # Developer Reference Datasets
