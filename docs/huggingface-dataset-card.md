@@ -2,14 +2,19 @@
 license: cc-by-4.0
 language:
   - en
-pretty_name: "Developer Reference Datasets: Aspect Ratios, WCAG Contrast, Encoding Sizes"
+pretty_name: "Developer Reference Datasets: Aspect Ratios, WCAG Contrast, MIME, Encoding, QR"
 tags:
   - aspect-ratio
-  - resolution
+  - screen-resolution
   - wcag
   - accessibility
   - color-contrast
+  - mime-types
+  - magic-numbers
   - character-encoding
+  - utf-8
+  - qr-code
+  - web-development
   - reference
 size_categories:
   - n<1K
@@ -38,16 +43,25 @@ configs:
 
 # Developer Reference Datasets
 
-Open, reproducible lookup tables for web and app developers, computed from first principles:
+<img src="https://raw.githubusercontent.com/cleanor-app/developer-reference-datasets/main/docs/kaggle/cover.png" alt="Developer Reference Datasets: aspect ratios, WCAG contrast, MIME, encoding, QR, format support" width="720">
 
-- **aspect-ratios** — 16 named aspect ratios × 11 widths → exact height (16:9 at 1920 = 1080).
-- **resolutions** — 29 named resolutions (720p → 8K, phones, social) → pixels, megapixels, reduced ratio.
-- **wcag-contrast-pairs** — every fg×bg pair of a 25-colour UI palette → WCAG 2.1 contrast ratio and AA/AAA pass-fail.
-- **wcag-on-white-black** — each colour vs white and black (the most-asked contrast question).
-- **encoding-sizes** — 16 text samples → code points and bytes in UTF-8 / UTF-16 / UTF-32 by script.
+Open, reproducible lookup tables that web and app developers reach for constantly — **computed from first principles, not scraped, so every value is exact and re-runnable.** CC BY 4.0.
 
-These are exact answers from the spec, not measurements: an aspect ratio, a WCAG contrast ratio and a byte count are computable, so the CSVs are computed and re-runnable.
+## Quick answers (straight from the data)
 
-- Code + methodology: https://github.com/cleanor-app/developer-reference-datasets
-- Write-ups: https://cleanor.app/reference
-- License: **CC BY 4.0** (attribution to Cleanor Labs).
+- **What is 16:9 in pixels?** 1920×1080, 1280×720, 3840×2160. 9:16 (Stories, Reels, TikTok) is those flipped. → `aspect-ratios`, `resolutions`
+- **What contrast ratio does WCAG require?** 4.5:1 for normal text (AA), 3:1 for large, 7:1 for AAA. `#6b7280` on white is 4.83 (passes AA); `#9ca3af` is 2.54 (fails). → `wcag-contrast-pairs`, `wcag-on-white-black`
+- **How many bytes is a character?** In UTF-8: Latin 1, accented/Greek/Cyrillic 2, CJK 3, most emoji 4 (a flag emoji is 8 bytes / 2 code points). → `encoding-sizes`
+- **What is the MIME type / magic number of a file?** Extension → MIME type + byte signature, **with the offset** (RIFF/ISO-BMFF/tar signatures are not at byte 0, which most lists get wrong). `.docx` is a ZIP (`PK`). → `file-types`
+- **How many characters fit in a QR code?** A version-1 QR holds 41 digits / 25 alphanumeric / 17 bytes at ECC level L; up to 7,089 digits at version 40. Computed from ISO/IEC 18004, verified. → `qr-code-capacity`
+- **Which browsers support AVIF / WebP / JPEG XL?** AVIF is fully supported since Chrome 85, Firefox 93, Safari 16.4; JPEG XL is fully supported nowhere. → `image-format-support`
+- Plus favicon/app-icon sizes per platform and current social-media image sizes (date-stamped).
+
+## Why it's trustworthy
+
+These are exact answers from the spec, not measurements. An aspect ratio, a WCAG contrast ratio, a UTF-8 byte count and a QR capacity are computable — so the CSVs are computed and re-runnable, and checkable against any online tool.
+
+- **Cite:** DOI [10.5281/zenodo.21369536](https://doi.org/10.5281/zenodo.21369536) (concept DOI, all versions, CC BY 4.0, Cleanor Labs)
+- **Code + methodology:** https://github.com/cleanor-app/developer-reference-datasets
+- **Human-readable write-ups:** https://cleanor.app/research/open-datasets
+- **License:** CC BY 4.0 (attribution to Cleanor Labs).

@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey.svg)](data/LICENSE)
 [![Reference](https://img.shields.io/badge/read%20the%20reference-cleanor.app%2Freference-0a7cff.svg)](https://cleanor.app/reference)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21369536.svg)](https://doi.org/10.5281/zenodo.21369536)
 
 > These are lookup tables computed from the spec, not measurements. That is the point: an aspect
 > ratio, a contrast ratio and a byte count have exact answers, so this repo gives you the exact

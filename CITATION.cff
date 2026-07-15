@@ -8,6 +8,11 @@ url: "https://cleanor.app/reference"
 repository-code: "https://github.com/cleanor-app/developer-reference-datasets"
 license: CC-BY-4.0
 version: "1.0.0"
+doi: "10.5281/zenodo.21369536"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21369536"
+    description: "Concept DOI (all versions) on Zenodo"
 keywords:
   - aspect ratio
   - screen resolution
