@@ -1,145 +1,475 @@
 {
   "id": "cleanorlabs/developer-reference-datasets",
-  "title": "Developer Reference: Aspect Ratios, WCAG Contrast, Encoding",
-  "subtitle": "Computed lookup tables: aspect-ratio pixels, WCAG 2.1 contrast, UTF-8/16/32 byte sizes",
-  "description": "Open, reproducible reference data for web and app developers — computed from first principles, not scraped, so every value is exact and re-runnable.\n\n**What's inside**\n- **aspect-ratios.csv / resolutions.csv**: 16 named aspect ratios across 11 widths (16:9 at 1920 = 1080), and 29 named resolutions (720p to 8K, phones, social) with megapixels and reduced ratio.\n- **wcag-contrast-pairs.csv / wcag-on-white-black.csv**: WCAG 2.1 contrast ratio and AA/AAA pass-fail for every pair of a 25-colour UI palette, and each colour vs white and black.\n- **encoding-sizes.csv**: code points and UTF-8 / UTF-16 / UTF-32 byte sizes for 16 text samples across scripts (Latin 1 byte, CJK 3, emoji 4).\n\n**License:** CC BY 4.0 (attribution to Cleanor Labs).\n**Code & methodology:** https://github.com/cleanor-app/developer-reference-datasets\n**Write-ups:** https://cleanor.app/reference",
-  "licenses": [{ "name": "CC BY 4.0" }],
-  "keywords": ["computer science", "data analytics", "beginner", "tabular", "internet"],
+  "title": "Developer Reference: Aspect, WCAG, MIME, Encoding",
+  "subtitle": "Computed lookup tables: aspect-ratio pixels, WCAG contrast, UTF byte sizes",
+  "description": "Open, reproducible reference data for web and app developers \u2014 computed from first principles, not scraped, so every value is exact and re-runnable.\n\n**What's inside**\n- **aspect-ratios.csv / resolutions.csv**: 16 named aspect ratios across 11 widths (16:9 at 1920 = 1080), and 29 named resolutions (720p to 8K, phones, social) with megapixels and reduced ratio.\n- **wcag-contrast-pairs.csv / wcag-on-white-black.csv**: WCAG 2.1 contrast ratio and AA/AAA pass-fail for every pair of a 25-colour UI palette, and each colour vs white and black.\n- **encoding-sizes.csv**: code points and UTF-8 / UTF-16 / UTF-32 byte sizes for 16 text samples across scripts (Latin 1 byte, CJK 3, emoji 4).\n\n**License:** CC BY 4.0 (attribution to Cleanor Labs).\n**Code & methodology:** https://github.com/cleanor-app/developer-reference-datasets\n**Write-ups:** https://cleanor.app/reference",
+  "licenses": [
+    {
+      "name": "CC BY 4.0"
+    }
+  ],
+  "keywords": [
+    "computer science",
+    "data analytics",
+    "beginner",
+    "tabular",
+    "internet"
+  ],
   "resources": [
     {
       "path": "aspect-ratios.csv",
-      "description": "Named aspect ratios × common widths → exact height.",
-      "schema": { "fields": [
-        { "name": "ratio", "description": "Aspect ratio label (e.g. 16:9)", "type": "string" },
-        { "name": "ratio_w", "description": "Ratio width term", "type": "number" },
-        { "name": "ratio_h", "description": "Ratio height term", "type": "number" },
-        { "name": "ratio_decimal", "description": "Width/height as a decimal", "type": "number" },
-        { "name": "orientation", "description": "landscape, portrait, or square", "type": "string" },
-        { "name": "use_case", "description": "Where the ratio is commonly used", "type": "string" },
-        { "name": "width_px", "description": "Width in pixels", "type": "number" },
-        { "name": "height_px", "description": "Computed height in pixels", "type": "number" }
-      ] }
+      "description": "Named aspect ratios \u00d7 common widths \u2192 exact height.",
+      "schema": {
+        "fields": [
+          {
+            "name": "ratio",
+            "description": "Aspect ratio label (e.g. 16:9)",
+            "type": "string"
+          },
+          {
+            "name": "ratio_w",
+            "description": "Ratio width term",
+            "type": "number"
+          },
+          {
+            "name": "ratio_h",
+            "description": "Ratio height term",
+            "type": "number"
+          },
+          {
+            "name": "ratio_decimal",
+            "description": "Width/height as a decimal",
+            "type": "number"
+          },
+          {
+            "name": "orientation",
+            "description": "landscape, portrait, or square",
+            "type": "string"
+          },
+          {
+            "name": "use_case",
+            "description": "Where the ratio is commonly used",
+            "type": "string"
+          },
+          {
+            "name": "width_px",
+            "description": "Width in pixels",
+            "type": "number"
+          },
+          {
+            "name": "height_px",
+            "description": "Computed height in pixels",
+            "type": "number"
+          }
+        ]
+      }
     },
     {
       "path": "resolutions.csv",
-      "description": "Named resolutions → pixel size, megapixels, reduced aspect ratio.",
-      "schema": { "fields": [
-        { "name": "name", "description": "Resolution name", "type": "string" },
-        { "name": "width_px", "description": "Width in pixels", "type": "number" },
-        { "name": "height_px", "description": "Height in pixels", "type": "number" },
-        { "name": "megapixels", "description": "Total megapixels", "type": "number" },
-        { "name": "aspect_ratio", "description": "Reduced aspect ratio", "type": "string" },
-        { "name": "aspect_decimal", "description": "Aspect ratio as a decimal", "type": "number" },
-        { "name": "orientation", "description": "landscape, portrait, or square", "type": "string" }
-      ] }
+      "description": "Named resolutions \u2192 pixel size, megapixels, reduced aspect ratio.",
+      "schema": {
+        "fields": [
+          {
+            "name": "name",
+            "description": "Resolution name",
+            "type": "string"
+          },
+          {
+            "name": "width_px",
+            "description": "Width in pixels",
+            "type": "number"
+          },
+          {
+            "name": "height_px",
+            "description": "Height in pixels",
+            "type": "number"
+          },
+          {
+            "name": "megapixels",
+            "description": "Total megapixels",
+            "type": "number"
+          },
+          {
+            "name": "aspect_ratio",
+            "description": "Reduced aspect ratio",
+            "type": "string"
+          },
+          {
+            "name": "aspect_decimal",
+            "description": "Aspect ratio as a decimal",
+            "type": "number"
+          },
+          {
+            "name": "orientation",
+            "description": "landscape, portrait, or square",
+            "type": "string"
+          }
+        ]
+      }
     },
     {
       "path": "wcag-contrast-pairs.csv",
-      "description": "WCAG 2.1 contrast ratio and AA/AAA pass-fail for every fg×bg colour pair.",
-      "schema": { "fields": [
-        { "name": "fg_name", "description": "Foreground colour name", "type": "string" },
-        { "name": "fg_hex", "description": "Foreground hex", "type": "string" },
-        { "name": "bg_name", "description": "Background colour name", "type": "string" },
-        { "name": "bg_hex", "description": "Background hex", "type": "string" },
-        { "name": "contrast_ratio", "description": "WCAG 2.1 contrast ratio", "type": "number" },
-        { "name": "aa_normal", "description": "Pass/fail AA normal text (>=4.5)", "type": "string" },
-        { "name": "aa_large", "description": "Pass/fail AA large text (>=3.0)", "type": "string" },
-        { "name": "aaa_normal", "description": "Pass/fail AAA normal text (>=7.0)", "type": "string" },
-        { "name": "aaa_large", "description": "Pass/fail AAA large text (>=4.5)", "type": "string" }
-      ] }
+      "description": "WCAG 2.1 contrast ratio and AA/AAA pass-fail for every fg\u00d7bg colour pair.",
+      "schema": {
+        "fields": [
+          {
+            "name": "fg_name",
+            "description": "Foreground colour name",
+            "type": "string"
+          },
+          {
+            "name": "fg_hex",
+            "description": "Foreground hex",
+            "type": "string"
+          },
+          {
+            "name": "bg_name",
+            "description": "Background colour name",
+            "type": "string"
+          },
+          {
+            "name": "bg_hex",
+            "description": "Background hex",
+            "type": "string"
+          },
+          {
+            "name": "contrast_ratio",
+            "description": "WCAG 2.1 contrast ratio",
+            "type": "number"
+          },
+          {
+            "name": "aa_normal",
+            "description": "Pass/fail AA normal text (>=4.5)",
+            "type": "string"
+          },
+          {
+            "name": "aa_large",
+            "description": "Pass/fail AA large text (>=3.0)",
+            "type": "string"
+          },
+          {
+            "name": "aaa_normal",
+            "description": "Pass/fail AAA normal text (>=7.0)",
+            "type": "string"
+          },
+          {
+            "name": "aaa_large",
+            "description": "Pass/fail AAA large text (>=4.5)",
+            "type": "string"
+          }
+        ]
+      }
     },
     {
       "path": "wcag-on-white-black.csv",
       "description": "Each colour's contrast vs white and vs black with AA/AAA pass-fail.",
-      "schema": { "fields": [
-        { "name": "color_name", "description": "Colour name", "type": "string" },
-        { "name": "hex", "description": "Colour hex", "type": "string" },
-        { "name": "vs", "description": "Background compared against (white/black)", "type": "string" },
-        { "name": "contrast_ratio", "description": "WCAG 2.1 contrast ratio", "type": "number" },
-        { "name": "aa_normal", "description": "Pass/fail AA normal text", "type": "string" },
-        { "name": "aa_large", "description": "Pass/fail AA large text", "type": "string" },
-        { "name": "aaa_normal", "description": "Pass/fail AAA normal text", "type": "string" },
-        { "name": "aaa_large", "description": "Pass/fail AAA large text", "type": "string" }
-      ] }
+      "schema": {
+        "fields": [
+          {
+            "name": "color_name",
+            "description": "Colour name",
+            "type": "string"
+          },
+          {
+            "name": "hex",
+            "description": "Colour hex",
+            "type": "string"
+          },
+          {
+            "name": "vs",
+            "description": "Background compared against (white/black)",
+            "type": "string"
+          },
+          {
+            "name": "contrast_ratio",
+            "description": "WCAG 2.1 contrast ratio",
+            "type": "number"
+          },
+          {
+            "name": "aa_normal",
+            "description": "Pass/fail AA normal text",
+            "type": "string"
+          },
+          {
+            "name": "aa_large",
+            "description": "Pass/fail AA large text",
+            "type": "string"
+          },
+          {
+            "name": "aaa_normal",
+            "description": "Pass/fail AAA normal text",
+            "type": "string"
+          },
+          {
+            "name": "aaa_large",
+            "description": "Pass/fail AAA large text",
+            "type": "string"
+          }
+        ]
+      }
     },
     {
       "path": "encoding-sizes.csv",
       "description": "Code points and UTF-8/16/32 byte sizes per text sample by script.",
-      "schema": { "fields": [
-        { "name": "sample_id", "description": "Sample identifier", "type": "string" },
-        { "name": "script", "description": "Writing system", "type": "string" },
-        { "name": "code_points", "description": "Number of Unicode code points", "type": "number" },
-        { "name": "utf16_code_units", "description": "Number of UTF-16 code units", "type": "number" },
-        { "name": "utf8_bytes", "description": "Size in UTF-8 bytes", "type": "number" },
-        { "name": "utf16_bytes", "description": "Size in UTF-16 bytes", "type": "number" },
-        { "name": "utf32_bytes", "description": "Size in UTF-32 bytes", "type": "number" },
-        { "name": "utf8_bytes_per_code_point", "description": "UTF-8 bytes per code point", "type": "number" }
-      ] }
+      "schema": {
+        "fields": [
+          {
+            "name": "sample_id",
+            "description": "Sample identifier",
+            "type": "string"
+          },
+          {
+            "name": "script",
+            "description": "Writing system",
+            "type": "string"
+          },
+          {
+            "name": "code_points",
+            "description": "Number of Unicode code points",
+            "type": "number"
+          },
+          {
+            "name": "utf16_code_units",
+            "description": "Number of UTF-16 code units",
+            "type": "number"
+          },
+          {
+            "name": "utf8_bytes",
+            "description": "Size in UTF-8 bytes",
+            "type": "number"
+          },
+          {
+            "name": "utf16_bytes",
+            "description": "Size in UTF-16 bytes",
+            "type": "number"
+          },
+          {
+            "name": "utf32_bytes",
+            "description": "Size in UTF-32 bytes",
+            "type": "number"
+          },
+          {
+            "name": "utf8_bytes_per_code_point",
+            "description": "UTF-8 bytes per code point",
+            "type": "number"
+          }
+        ]
+      }
     },
     {
       "path": "file-types.csv",
-      "description": "66 file types → MIME type and magic-number signature (with byte offset).",
-      "schema": { "fields": [
-        { "name": "category", "description": "File category (image, audio, video, archive, document, font, executable, data, web, text)", "type": "string" },
-        { "name": "extension", "description": "File extension", "type": "string" },
-        { "name": "mime_type", "description": "IANA media type", "type": "string" },
-        { "name": "magic_hex", "description": "Distinguishing byte signature in hex (blank for text formats)", "type": "string" },
-        { "name": "magic_offset_bytes", "description": "Byte offset of the signature", "type": "number" },
-        { "name": "notes", "description": "Disambiguation notes", "type": "string" }
-      ] }
+      "description": "66 file types \u2192 MIME type and magic-number signature (with byte offset).",
+      "schema": {
+        "fields": [
+          {
+            "name": "category",
+            "description": "File category (image, audio, video, archive, document, font, executable, data, web, text)",
+            "type": "string"
+          },
+          {
+            "name": "extension",
+            "description": "File extension",
+            "type": "string"
+          },
+          {
+            "name": "mime_type",
+            "description": "IANA media type",
+            "type": "string"
+          },
+          {
+            "name": "magic_hex",
+            "description": "Distinguishing byte signature in hex (blank for text formats)",
+            "type": "string"
+          },
+          {
+            "name": "magic_offset_bytes",
+            "description": "Byte offset of the signature",
+            "type": "number"
+          },
+          {
+            "name": "notes",
+            "description": "Disambiguation notes",
+            "type": "string"
+          }
+        ]
+      }
     },
     {
       "path": "favicon-icon-sizes.csv",
       "description": "Favicon and app-icon size requirements per platform.",
-      "schema": { "fields": [
-        { "name": "platform", "description": "Platform or context", "type": "string" },
-        { "name": "purpose", "description": "What the icon is for", "type": "string" },
-        { "name": "size_px", "description": "Required pixel size(s)", "type": "string" },
-        { "name": "format", "description": "File format", "type": "string" },
-        { "name": "reference", "description": "The link/manifest key/resource name", "type": "string" },
-        { "name": "notes", "description": "Notes", "type": "string" }
-      ] }
+      "schema": {
+        "fields": [
+          {
+            "name": "platform",
+            "description": "Platform or context",
+            "type": "string"
+          },
+          {
+            "name": "purpose",
+            "description": "What the icon is for",
+            "type": "string"
+          },
+          {
+            "name": "size_px",
+            "description": "Required pixel size(s)",
+            "type": "string"
+          },
+          {
+            "name": "format",
+            "description": "File format",
+            "type": "string"
+          },
+          {
+            "name": "reference",
+            "description": "The link/manifest key/resource name",
+            "type": "string"
+          },
+          {
+            "name": "notes",
+            "description": "Notes",
+            "type": "string"
+          }
+        ]
+      }
     },
     {
       "path": "social-media-image-sizes.csv",
       "description": "Recommended social-media image sizes, date-stamped (they change).",
-      "schema": { "fields": [
-        { "name": "platform", "description": "Social platform", "type": "string" },
-        { "name": "placement", "description": "Where the image goes", "type": "string" },
-        { "name": "width_px", "description": "Recommended width in pixels", "type": "number" },
-        { "name": "height_px", "description": "Recommended height in pixels", "type": "number" },
-        { "name": "aspect_ratio", "description": "Aspect ratio", "type": "string" },
-        { "name": "measured_date", "description": "Month the value was verified", "type": "string" },
-        { "name": "notes", "description": "Safe-area and other notes", "type": "string" }
-      ] }
+      "schema": {
+        "fields": [
+          {
+            "name": "platform",
+            "description": "Social platform",
+            "type": "string"
+          },
+          {
+            "name": "placement",
+            "description": "Where the image goes",
+            "type": "string"
+          },
+          {
+            "name": "width_px",
+            "description": "Recommended width in pixels",
+            "type": "number"
+          },
+          {
+            "name": "height_px",
+            "description": "Recommended height in pixels",
+            "type": "number"
+          },
+          {
+            "name": "aspect_ratio",
+            "description": "Aspect ratio",
+            "type": "string"
+          },
+          {
+            "name": "measured_date",
+            "description": "Month the value was verified",
+            "type": "string"
+          },
+          {
+            "name": "notes",
+            "description": "Safe-area and other notes",
+            "type": "string"
+          }
+        ]
+      }
     },
     {
       "path": "qr-code-capacity.csv",
-      "description": "Max characters per QR version × ECC level × mode (computed from ISO/IEC 18004).",
-      "schema": { "fields": [
-        { "name": "version", "description": "QR version 1-40", "type": "number" },
-        { "name": "modules", "description": "Side length in modules", "type": "number" },
-        { "name": "ecc_level", "description": "Error-correction level L/M/Q/H", "type": "string" },
-        { "name": "ecc_recovery_pct", "description": "Percent of codewords recoverable", "type": "number" },
-        { "name": "numeric", "description": "Max digits in numeric mode", "type": "number" },
-        { "name": "alphanumeric", "description": "Max chars in alphanumeric mode", "type": "number" },
-        { "name": "byte", "description": "Max bytes in byte (UTF-8) mode", "type": "number" },
-        { "name": "kanji", "description": "Max characters in kanji mode", "type": "number" },
-        { "name": "data_codewords", "description": "Data codewords available", "type": "number" }
-      ] }
+      "description": "Max characters per QR version \u00d7 ECC level \u00d7 mode (computed from ISO/IEC 18004).",
+      "schema": {
+        "fields": [
+          {
+            "name": "version",
+            "description": "QR version 1-40",
+            "type": "number"
+          },
+          {
+            "name": "modules",
+            "description": "Side length in modules",
+            "type": "number"
+          },
+          {
+            "name": "ecc_level",
+            "description": "Error-correction level L/M/Q/H",
+            "type": "string"
+          },
+          {
+            "name": "ecc_recovery_pct",
+            "description": "Percent of codewords recoverable",
+            "type": "number"
+          },
+          {
+            "name": "numeric",
+            "description": "Max digits in numeric mode",
+            "type": "number"
+          },
+          {
+            "name": "alphanumeric",
+            "description": "Max chars in alphanumeric mode",
+            "type": "number"
+          },
+          {
+            "name": "byte",
+            "description": "Max bytes in byte (UTF-8) mode",
+            "type": "number"
+          },
+          {
+            "name": "kanji",
+            "description": "Max characters in kanji mode",
+            "type": "number"
+          },
+          {
+            "name": "data_codewords",
+            "description": "Data codewords available",
+            "type": "number"
+          }
+        ]
+      }
     },
     {
       "path": "image-format-support.csv",
       "description": "AVIF/WebP/JPEG XL/HEIC/AV1/HEVC support per browser (first full version + current).",
-      "schema": { "fields": [
-        { "name": "format", "description": "Format key", "type": "string" },
-        { "name": "format_title", "description": "Format title", "type": "string" },
-        { "name": "browser", "description": "Browser key", "type": "string" },
-        { "name": "browser_name", "description": "Browser name", "type": "string" },
-        { "name": "first_full_support_version", "description": "First version with full support ('never' if none)", "type": "string" },
-        { "name": "current_support", "description": "full / partial / no / unknown", "type": "string" },
-        { "name": "caniuse_version", "description": "caniuse-lite data vintage", "type": "string" }
-      ] }
+      "schema": {
+        "fields": [
+          {
+            "name": "format",
+            "description": "Format key",
+            "type": "string"
+          },
+          {
+            "name": "format_title",
+            "description": "Format title",
+            "type": "string"
+          },
+          {
+            "name": "browser",
+            "description": "Browser key",
+            "type": "string"
+          },
+          {
+            "name": "browser_name",
+            "description": "Browser name",
+            "type": "string"
+          },
+          {
+            "name": "first_full_support_version",
+            "description": "First version with full support ('never' if none)",
+            "type": "string"
+          },
+          {
+            "name": "current_support",
+            "description": "full / partial / no / unknown",
+            "type": "string"
+          },
+          {
+            "name": "caniuse_version",
+            "description": "caniuse-lite data vintage",
+            "type": "string"
+          }
+        ]
+      }
     }
   ]
 }
