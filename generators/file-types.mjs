@@ -1,0 +1,95 @@
+#!/usr/bin/env node
+// File types reference: extension -> MIME type -> magic-number signature. Compiled from stable,
+// long-established facts (IANA media types + well-known file signatures). One authoritative
+// table that answers both "what's the MIME type of .X" and "how do I identify a file by its
+// bytes". Text formats that have no reliable signature are included with an empty magic field
+// and a note, rather than a made-up one.
+//
+//   data/file-types.csv
+//   node generators/file-types.mjs
+
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const DATA = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'data');
+fs.mkdirSync(DATA, { recursive: true });
+
+// [category, extension, mime_type, magic_hex, magic_offset, notes]
+// magic_hex is the distinguishing signature; for container formats that share an outer magic
+// (RIFF, ISO-BMFF) the offset points at the brand bytes that tell them apart.
+const T = [
+  ['image', 'png', 'image/png', '89 50 4E 47 0D 0A 1A 0A', 0, ''],
+  ['image', 'jpg', 'image/jpeg', 'FF D8 FF', 0, 'also .jpeg/.jpe'],
+  ['image', 'gif', 'image/gif', '47 49 46 38', 0, '"GIF8" (87a/89a)'],
+  ['image', 'webp', 'image/webp', '57 45 42 50', 8, 'RIFF at 0, "WEBP" at byte 8'],
+  ['image', 'bmp', 'image/bmp', '42 4D', 0, '"BM"'],
+  ['image', 'tiff', 'image/tiff', '49 49 2A 00', 0, 'LE; BE is 4D 4D 00 2A'],
+  ['image', 'ico', 'image/x-icon', '00 00 01 00', 0, 'favicon; cursor is 00 00 02 00'],
+  ['image', 'heic', 'image/heic', '66 74 79 70 68 65 69 63', 4, 'ISO-BMFF ftyp, brand "heic"'],
+  ['image', 'avif', 'image/avif', '66 74 79 70 61 76 69 66', 4, 'ISO-BMFF ftyp, brand "avif"'],
+  ['image', 'jxl', 'image/jxl', 'FF 0A', 0, 'bare codestream; container is 00 00 00 0C 4A 58 4C 20'],
+  ['image', 'svg', 'image/svg+xml', '', 0, 'XML text: starts "<?xml" or "<svg"'],
+  ['image', 'psd', 'image/vnd.adobe.photoshop', '38 42 50 53', 0, '"8BPS"'],
+  ['image', 'cr2', 'image/x-canon-cr2', '49 49 2A 00 10 00 00 00 43 52', 0, 'Canon RAW'],
+  ['audio', 'mp3', 'audio/mpeg', '49 44 33', 0, '"ID3" tag; or frame sync FF FB/FF F3/FF F2'],
+  ['audio', 'wav', 'audio/wav', '57 41 56 45', 8, 'RIFF at 0, "WAVE" at byte 8'],
+  ['audio', 'flac', 'audio/flac', '66 4C 61 43', 0, '"fLaC"'],
+  ['audio', 'ogg', 'audio/ogg', '4F 67 67 53', 0, '"OggS"'],
+  ['audio', 'm4a', 'audio/mp4', '66 74 79 70 4D 34 41 20', 4, 'ISO-BMFF ftyp, brand "M4A "'],
+  ['audio', 'aac', 'audio/aac', 'FF F1', 0, 'ADTS; also FF F9'],
+  ['audio', 'mid', 'audio/midi', '4D 54 68 64', 0, '"MThd"'],
+  ['video', 'mp4', 'video/mp4', '66 74 79 70', 4, 'ISO-BMFF ftyp; brand isom/mp42/etc at byte 8'],
+  ['video', 'mov', 'video/quicktime', '66 74 79 70 71 74 20 20', 4, 'ISO-BMFF ftyp, brand "qt  "'],
+  ['video', 'webm', 'video/webm', '1A 45 DF A3', 0, 'EBML (shared with MKV)'],
+  ['video', 'mkv', 'video/x-matroska', '1A 45 DF A3', 0, 'EBML; DocType "matroska" at ~byte 31'],
+  ['video', 'avi', 'video/x-msvideo', '41 56 49 20', 8, 'RIFF at 0, "AVI " at byte 8'],
+  ['video', 'flv', 'video/x-flv', '46 4C 56', 0, '"FLV"'],
+  ['video', 'mpg', 'video/mpeg', '00 00 01 BA', 0, 'MPEG program stream'],
+  ['archive', 'zip', 'application/zip', '50 4B 03 04', 0, '"PK.."; empty 50 4B 05 06'],
+  ['archive', 'gz', 'application/gzip', '1F 8B', 0, ''],
+  ['archive', 'bz2', 'application/x-bzip2', '42 5A 68', 0, '"BZh"'],
+  ['archive', 'xz', 'application/x-xz', 'FD 37 7A 58 5A 00', 0, ''],
+  ['archive', 'zst', 'application/zstd', '28 B5 2F FD', 0, 'Zstandard'],
+  ['archive', '7z', 'application/x-7z-compressed', '37 7A BC AF 27 1C', 0, ''],
+  ['archive', 'rar', 'application/vnd.rar', '52 61 72 21 1A 07', 0, '"Rar!"; v5 adds 01 00'],
+  ['archive', 'tar', 'application/x-tar', '75 73 74 61 72', 257, '"ustar" at byte 257'],
+  ['document', 'pdf', 'application/pdf', '25 50 44 46', 0, '"%PDF"'],
+  ['document', 'rtf', 'application/rtf', '7B 5C 72 74 66', 0, '"{\\rtf"'],
+  ['document', 'ps', 'application/postscript', '25 21', 0, '"%!"'],
+  ['document', 'doc', 'application/msword', 'D0 CF 11 E0 A1 B1 1A E1', 0, 'legacy OLE (doc/xls/ppt)'],
+  ['document', 'docx', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', '50 4B 03 04', 0, 'ZIP container (OOXML)'],
+  ['document', 'xlsx', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', '50 4B 03 04', 0, 'ZIP container (OOXML)'],
+  ['document', 'pptx', 'application/vnd.openxmlformats-officedocument.presentationml.presentation', '50 4B 03 04', 0, 'ZIP container (OOXML)'],
+  ['document', 'epub', 'application/epub+zip', '50 4B 03 04', 0, 'ZIP; "mimetype" entry = application/epub+zip'],
+  ['font', 'ttf', 'font/ttf', '00 01 00 00', 0, 'TrueType'],
+  ['font', 'otf', 'font/otf', '4F 54 54 4F', 0, '"OTTO"'],
+  ['font', 'woff', 'font/woff', '77 4F 46 46', 0, '"wOFF"'],
+  ['font', 'woff2', 'font/woff2', '77 4F 46 32', 0, '"wOF2"'],
+  ['font', 'eot', 'application/vnd.ms-fontobject', '', 34, 'no fixed magic; 0x504C at byte 34'],
+  ['executable', 'exe', 'application/vnd.microsoft.portable-executable', '4D 5A', 0, '"MZ" (DOS/PE)'],
+  ['executable', 'elf', 'application/x-elf', '7F 45 4C 46', 0, '".ELF" (Linux)'],
+  ['executable', 'macho', 'application/x-mach-binary', 'FE ED FA CF', 0, '64-bit; 32-bit FE ED FA CE'],
+  ['executable', 'class', 'application/java-vm', 'CA FE BA BE', 0, 'Java class'],
+  ['executable', 'wasm', 'application/wasm', '00 61 73 6D', 0, '"\\0asm"'],
+  ['data', 'sqlite', 'application/vnd.sqlite3', '53 51 4C 69 74 65 20 66 6F 72 6D 61 74 20 33 00', 0, '"SQLite format 3\\0"'],
+  ['data', 'json', 'application/json', '', 0, 'text, no signature'],
+  ['data', 'xml', 'application/xml', '', 0, 'text; often "<?xml"'],
+  ['data', 'csv', 'text/csv', '', 0, 'text, no signature'],
+  ['data', 'yaml', 'application/yaml', '', 0, 'text, no signature'],
+  ['data', 'toml', 'application/toml', '', 0, 'text, no signature'],
+  ['data', 'parquet', 'application/vnd.apache.parquet', '50 41 52 31', 0, '"PAR1" at start AND end'],
+  ['web', 'html', 'text/html', '', 0, 'text; often "<!DOCTYPE" or "<html"'],
+  ['web', 'css', 'text/css', '', 0, 'text, no signature'],
+  ['web', 'js', 'text/javascript', '', 0, 'text, no signature'],
+  ['web', 'wasm', 'application/wasm', '00 61 73 6D', 0, 'see executable'],
+  ['text', 'txt', 'text/plain', '', 0, 'text; UTF-8 BOM is EF BB BF'],
+  ['text', 'md', 'text/markdown', '', 0, 'text, no signature'],
+];
+
+// CSV-escape: quote a field only if it needs it, and double any internal quotes (RFC 4180).
+const q = (v) => { const s = String(v); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
+const rows = [['category', 'extension', 'mime_type', 'magic_hex', 'magic_offset_bytes', 'notes']];
+for (const [cat, ext, mime, magic, off, notes] of T) rows.push([cat, ext, mime, magic, off, notes]);
+fs.writeFileSync(path.join(DATA, 'file-types.csv'), rows.map((r) => r.map(q).join(',')).join('\n') + '\n');
+console.log(`✓ data/file-types.csv (${rows.length - 1} types, ${T.filter((r) => r[3]).length} with a byte signature)`);

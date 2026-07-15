@@ -75,6 +75,43 @@
         { "name": "utf32_bytes", "description": "Size in UTF-32 bytes", "type": "number" },
         { "name": "utf8_bytes_per_code_point", "description": "UTF-8 bytes per code point", "type": "number" }
       ] }
+    },
+    {
+      "path": "file-types.csv",
+      "description": "66 file types → MIME type and magic-number signature (with byte offset).",
+      "schema": { "fields": [
+        { "name": "category", "description": "File category (image, audio, video, archive, document, font, executable, data, web, text)", "type": "string" },
+        { "name": "extension", "description": "File extension", "type": "string" },
+        { "name": "mime_type", "description": "IANA media type", "type": "string" },
+        { "name": "magic_hex", "description": "Distinguishing byte signature in hex (blank for text formats)", "type": "string" },
+        { "name": "magic_offset_bytes", "description": "Byte offset of the signature", "type": "number" },
+        { "name": "notes", "description": "Disambiguation notes", "type": "string" }
+      ] }
+    },
+    {
+      "path": "favicon-icon-sizes.csv",
+      "description": "Favicon and app-icon size requirements per platform.",
+      "schema": { "fields": [
+        { "name": "platform", "description": "Platform or context", "type": "string" },
+        { "name": "purpose", "description": "What the icon is for", "type": "string" },
+        { "name": "size_px", "description": "Required pixel size(s)", "type": "string" },
+        { "name": "format", "description": "File format", "type": "string" },
+        { "name": "reference", "description": "The link/manifest key/resource name", "type": "string" },
+        { "name": "notes", "description": "Notes", "type": "string" }
+      ] }
+    },
+    {
+      "path": "social-media-image-sizes.csv",
+      "description": "Recommended social-media image sizes, date-stamped (they change).",
+      "schema": { "fields": [
+        { "name": "platform", "description": "Social platform", "type": "string" },
+        { "name": "placement", "description": "Where the image goes", "type": "string" },
+        { "name": "width_px", "description": "Recommended width in pixels", "type": "number" },
+        { "name": "height_px", "description": "Recommended height in pixels", "type": "number" },
+        { "name": "aspect_ratio", "description": "Aspect ratio", "type": "string" },
+        { "name": "measured_date", "description": "Month the value was verified", "type": "string" },
+        { "name": "notes", "description": "Safe-area and other notes", "type": "string" }
+      ] }
     }
   ]
 }

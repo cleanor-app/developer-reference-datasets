@@ -19,6 +19,9 @@
 | [`data/wcag-contrast-pairs.csv`](data/wcag-contrast-pairs.csv) | every foreground×background pair of a 25-colour UI palette → WCAG 2.1 contrast ratio + AA/AAA pass-fail | 600 |
 | [`data/wcag-on-white-black.csv`](data/wcag-on-white-black.csv) | each colour vs white and vs black — the most-asked contrast question | 48 |
 | [`data/encoding-sizes.csv`](data/encoding-sizes.csv) | 16 text samples across scripts → code points and bytes in UTF-8 / UTF-16 / UTF-32 | 16 |
+| [`data/file-types.csv`](data/file-types.csv) | 66 file types → MIME type + magic-number signature (with offset) + category | 66 |
+| [`data/favicon-icon-sizes.csv`](data/favicon-icon-sizes.csv) | favicon / app-icon size requirements across Web, Apple, PWA, Android, iOS, Windows, stores | 32 |
+| [`data/social-media-image-sizes.csv`](data/social-media-image-sizes.csv) | recommended image sizes for 7 platforms + Open Graph, each date-stamped (they change) | 26 |
 
 ## A few answers straight from the data
 
@@ -33,6 +36,10 @@
 | [`docs/aspect-ratios.md`](docs/aspect-ratios.md) | What is 16:9 in pixels? Every common ratio and resolution, as a table |
 | [`docs/wcag-contrast.md`](docs/wcag-contrast.md) | Which colour pairs pass WCAG AA/AAA, and the formula behind it |
 | [`docs/character-encoding-sizes.md`](docs/character-encoding-sizes.md) | How many bytes is a character in UTF-8 vs UTF-16 vs UTF-32? |
+| [`docs/mime-types-list.md`](docs/mime-types-list.md) | Extension → MIME type, and the traps (docx is a ZIP, svg is svg+xml) |
+| [`docs/file-signatures-magic-numbers.md`](docs/file-signatures-magic-numbers.md) | Identify a file by its bytes — signatures with the offset that most lists get wrong |
+| [`docs/favicon-and-app-icon-sizes.md`](docs/favicon-and-app-icon-sizes.md) | Every favicon and app-icon size, per platform |
+| [`docs/social-media-image-sizes.md`](docs/social-media-image-sizes.md) | Current social image sizes, date-stamped |
 
 ## Reproduce
 

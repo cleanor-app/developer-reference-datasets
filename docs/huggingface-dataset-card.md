@@ -24,6 +24,12 @@ configs:
     data_files: wcag-on-white-black.csv
   - config_name: encoding-sizes
     data_files: encoding-sizes.csv
+  - config_name: file-types
+    data_files: file-types.csv
+  - config_name: favicon-icon-sizes
+    data_files: favicon-icon-sizes.csv
+  - config_name: social-media-image-sizes
+    data_files: social-media-image-sizes.csv
 ---
 
 # Developer Reference Datasets
